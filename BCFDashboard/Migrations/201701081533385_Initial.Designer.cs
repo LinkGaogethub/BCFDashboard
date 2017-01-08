@@ -13,7 +13,7 @@ namespace BCFDashboard.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201701071701166_Initial"; }
+            get { return "201701081533385_Initial"; }
         }
         
         string IMigrationMetadata.Source

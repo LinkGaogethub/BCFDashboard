@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using BCFDashboard.Helpers;
 using BCFDashboard.Models;
 
 namespace BCFDashboard.Controllers
@@ -114,8 +115,6 @@ namespace BCFDashboard.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-
-        // Retrive values from bimsync, and add them to the database
 
 
         protected override void Dispose(bool disposing)

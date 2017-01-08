@@ -180,10 +180,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Helpers\Requester.cs" />
-    <Compile Include="Migrations\201701071701166_Initial.cs" />
-    <Compile Include="Migrations\201701071701166_Initial.Designer.cs">
-      <DependentUpon>201701071701166_Initial.cs</DependentUpon>
+    <Compile Include="Helpers\BcfApi.cs" />
+    <Compile Include="Helpers\BimsyncApi.cs" />
+    <Compile Include="Migrations\201701081533385_Initial.cs" />
+    <Compile Include="Migrations\201701081533385_Initial.Designer.cs">
+      <DependentUpon>201701081533385_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -279,8 +280,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201701071701166_Initial.resx">
-      <DependentUpon>201701071701166_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201701081533385_Initial.resx">
+      <DependentUpon>201701081533385_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

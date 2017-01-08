@@ -15,7 +15,7 @@ namespace BCFDashboard.Migrations
 
         protected override void Seed(BCFDashboard.Models.ApplicationDbContext context)
         {
-            context.Projects.AddOrUpdate(p => p.projectId,
+            context.Projects.AddOrUpdate(p => p.project_id,
                 new Project
                 {
                     project_id = "3c34c9b3-1b9b-4750-a4f3-0641d58fe48e",
@@ -25,27 +25,27 @@ namespace BCFDashboard.Migrations
                 }
                 );
 
-            context.Topics.AddOrUpdate(p => p.topicId,
+            context.Topics.AddOrUpdate(p => p.guid,
                 new Topic
                 {
                     guid = "33a62c72-b81d-476d-98c0-662d8775f057",
                     topic_type = "Error",
                     topic_status = "Closed",
                     title = "Wall is misplaced",
-                    creation_date = "Mon Jan 18 12:40:50 CEST 2016",
-                    modified_date = "Mon Jan 18 12:42:52 CEST 2016",
+                    creation_date = DateTime.Now,
+                    modified_date = DateTime.Now,
                     modified_author = "user1@test.com",
                     assigned_to = "user2@test.com"
                 }
                 );
 
-            context.Comments.AddOrUpdate(p => p.commentID,
+            context.Comments.AddOrUpdate(p => p.guid,
                 new Comment
                 {
                     guid = "d13fd9fa-2f54-4bbd-b37d-15a975077cd3",
                     verbal_status = "Open",
                     status = "Warning",
-                    date = "Mon Jan 18 12:43:48 CEST 2016",
+                    date = DateTime.Now,
                     author = "user2@test.com",
                     comment = "Check this",
                     topic_guid = "6411ce04-5391-40a6-97c2-be0ca45fcc96",

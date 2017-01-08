@@ -11,29 +11,27 @@ namespace BCFDashboard.Migrations
                 "dbo.Comments",
                 c => new
                     {
-                        commentID = c.Int(nullable: false, identity: true),
-                        guid = c.String(),
+                        guid = c.String(nullable: false, maxLength: 128),
                         verbal_status = c.String(),
                         status = c.String(),
-                        date = c.String(),
+                        date = c.DateTime(nullable: false),
                         author = c.String(),
                         comment = c.String(),
                         topic_guid = c.String(),
                         viewpoint_guid = c.String(),
                     })
-                .PrimaryKey(t => t.commentID);
+                .PrimaryKey(t => t.guid);
             
             CreateTable(
                 "dbo.Projects",
                 c => new
                     {
-                        projectId = c.Int(nullable: false, identity: true),
-                        project_id = c.String(),
+                        project_id = c.String(nullable: false, maxLength: 128),
                         name = c.String(),
                         bimsync_project_name = c.String(),
                         bimsync_project_id = c.String(),
                     })
-                .PrimaryKey(t => t.projectId);
+                .PrimaryKey(t => t.project_id);
             
             CreateTable(
                 "dbo.AspNetRoles",
@@ -62,18 +60,16 @@ namespace BCFDashboard.Migrations
                 "dbo.Topics",
                 c => new
                     {
-                        topicId = c.Int(nullable: false, identity: true),
-                        projectId = c.Int(nullable: false),
-                        guid = c.String(),
+                        guid = c.String(nullable: false, maxLength: 128),
                         topic_type = c.String(),
                         topic_status = c.String(),
                         title = c.String(),
-                        creation_date = c.String(),
-                        modified_date = c.String(),
+                        creation_date = c.DateTime(nullable: false),
+                        modified_date = c.DateTime(nullable: false),
                         modified_author = c.String(),
                         assigned_to = c.String(),
                     })
-                .PrimaryKey(t => t.topicId);
+                .PrimaryKey(t => t.guid);
             
             CreateTable(
                 "dbo.AspNetUsers",

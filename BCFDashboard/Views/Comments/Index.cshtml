@@ -65,9 +65,9 @@
             @Html.DisplayFor(modelItem => item.viewpoint_guid)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.commentID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.commentID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.commentID })
+            @Html.ActionLink("Edit", "Edit", new { id=item.guid }) |
+            @Html.ActionLink("Details", "Details", new { id=item.guid }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.guid })
         </td>
     </tr>
 }
