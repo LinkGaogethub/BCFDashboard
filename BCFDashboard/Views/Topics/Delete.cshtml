@@ -1,0 +1,96 @@
+﻿@model BCFDashboard.Models.Topic
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>topic</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.projectId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.projectId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.guid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.guid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.topic_type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.topic_type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.topic_status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.topic_status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.creation_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.creation_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.modified_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.modified_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.modified_author)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.modified_author)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.assigned_to)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.assigned_to)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,81 @@
+﻿@model IEnumerable<BCFDashboard.Models.Topic>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.projectId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.guid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.topic_type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.topic_status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.creation_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.modified_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.modified_author)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.assigned_to)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.projectId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.guid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.topic_type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.topic_status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.creation_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.modified_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.modified_author)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.assigned_to)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.topicId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.topicId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.topicId })
+        </td>
+    </tr>
+}
+
+</table>
